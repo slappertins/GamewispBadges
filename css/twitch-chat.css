@@ -1,0 +1,7 @@
+﻿/* BetterTTV */
+.ember-chat .chat-messages div.chat-line.highlight{background-color:#c59531 !important;}
+.ember-chat .chat-messages div.chat-line.highlight span.from{color:#000 !important;}
+
+/* Twitch */
+.ember-chat .chat-interface .suggestions div.highlighted{background-color:#c59531 !important;}
+html,body{background-color:#191919 !important;}

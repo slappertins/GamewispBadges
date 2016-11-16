@@ -1,0 +1,37 @@
+{
+   "background": {
+      "persistant": false,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/logo.png",
+         "38": "images/logo.png"
+      },
+      "default_title": "Adds chat badges for gamewisp subs"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/main-css.css" ],
+      "js": [ "js/main.js" ],
+      "matches": [ "*://www.twitch.tv/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/twitch-chat.css" ],
+      "matches": [ "*://www.twitch.tv/*/chat?popout" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Adds chat badges for gamewisp subs",
+   "icons": {
+      "128": "images/logo.png",
+      "16": "images/logo.png",
+      "48": "images/logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArOPgWftlVOnk3fXC+dMSXbxjlD38VHyY/cJ4puNGdyGnCIPIA2bmUIZ3pY77FErOzyV43AzURBGLUAYyHHn0I2MNtGRtapZztl7629ofaYTONrY2cJ4AcXksslf8NwK/jTg9HyxZcGVyZjiIw/zXlSw6JcvRyD7EayD3aIrJH2y6VmbBE9SqP/eUP7XItTQC51gpifiKqQp6OObgVqdrkvdEXmX5fVLyi3BzKmbmFkpWCH/MFA1EQAz24Ty8HKeA/UelRJ4AvS1PsQU3962h07gh3vZqYu01AeiZRfDvWlu6NI2uyr2wFE1NFPQdqcJ5RwAn6YXbx0UJgUGPI1gvYwIDAQAB",
+   "manifest_version": 2,
+   "name": "Gamewisp Badges BETA",
+   "permissions": [ "*://*.twitch.tv/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.915"
+}
